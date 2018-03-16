@@ -1,11 +1,18 @@
 # Global Health Module [MD999]
 ## Measuring Inequalities
 
+![Course logo](/images/md999.png)
 ## Systema Set-up
 
 ### Install Stata - Software Centre
 
+![Software Centre 1](/images/computer1.png)
+
+![Software Centre 2](/images/computer2.png)
+
 ### Install additional commands
+
+![Stata](/images/stata.png)
 
 ```
 ssc install conindex
@@ -84,6 +91,7 @@ logistic stunt b2.medu
 
 Are the ethnic differences in childhood stunting rates that we observe attributable to education difference?
 
+![Map](/images/map2.png)
 ```
 gen noed = (medu ==0)
 tab region noed, row chi
