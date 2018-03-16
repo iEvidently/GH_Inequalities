@@ -2,7 +2,7 @@
 ## Measuring Inequalities
 
 ![Course logo](/images/md999.png)
-## Systema Set-up
+## System Set-up
 
 ### Install Stata - Software Centre
 
