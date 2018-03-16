@@ -49,13 +49,13 @@ codebook
 
 Stunting is the impaired growth and development that children experience from poor nutrition, repeated infection, and inadequate psychosocial stimulation. Children are defined as *stunted if their height-for-age is more than two standard deviations* below the WHO Child Growth Standards median.
 
-
+```
 hist haz
 
 gen stunt = haz < - 2
+```
 
-
-## Concept of Disparity
+## 1. Concept of Disparity
 
 Is there a difference in stunting by maternal educational attainment?
 
@@ -80,7 +80,7 @@ logistic stunt b2.medu
 ````
 
 
-## Concept of Inequity
+## 2. Concept of Inequity
 
 Are the ethnic differences in childhood stunting rates that we observe attributable to education difference?
 
@@ -102,7 +102,7 @@ cs stunt noed
 ```
 
 
-## Concept of Inequality
+## 3. Concept of Inequality
 
 To check for degree of association betwen difference in rates of childhood stunting between wealth groups
 
@@ -121,7 +121,7 @@ conindex stunt, rankvar(wealth) generalized truezero
 ```
 
 
-## Concept of Burden
+## 4. Concept of Burden
 
 Which wealth group has the greatest burden?
 
@@ -142,7 +142,7 @@ Graphically:
 graph hbar (count) stunt, over(wealth) ytitle("Number of Stunted Children")
 ```
 
-## Blinder Oaxaca decomposition analysis
+## 5. Blinder Oaxaca decomposition analysis
 To determine the magnitude in rural-urban disparities in childhood malnutrition and decompose the gap:
 
 Magnitude
@@ -192,7 +192,7 @@ keep in 6/12
 graph hbar perc, over(factorLabel, sort(perc) descend) blabel(bar, position(inside) format(%9.1f) color(white)) ytitle("Percentage Stunted") sort(perc)
 ```
 
-log close
+
 
 
 
