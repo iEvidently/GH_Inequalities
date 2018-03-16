@@ -44,9 +44,11 @@ use https://s3.amazonaws.com/ghinequality/gh_data.dta, clear
 ## Explore that the data
 
 ```
+codebook
+
 describe 
 
-codebook
+
 
 ```
 
@@ -196,8 +198,13 @@ gen perc = (var / var[3])*100
 
 keep in 6/12
 
+#delimit ;
 
-graph hbar perc, over(factorLabel, sort(perc) descend) blabel(bar, position(inside) format(%9.1f) color(white)) ytitle("Percentage Stunted") sort(perc)
+graph hbar perc, 
+	over(factorLabel, sort(perc) descend) 
+	blabel(bar, position(inside) format(%9.1f) color(white)) 
+	ytitle("Percentage Stunted") sort(perc);
+#delimit cr
 ```
 
 
